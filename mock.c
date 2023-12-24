@@ -28,7 +28,9 @@ int main(int argc, char *argv[]) {
         fp = stdin;
     }
 
+    #ifndef _WIN32
     setvbuf(stdout, NULL, _IOFBF, 0);
+    #endif
 
     bool lowercase = true;
     char c;
