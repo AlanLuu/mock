@@ -33,11 +33,10 @@ int main(int argc, char *argv[]) {
     #endif
 
     bool lowercase = true;
-    char c;
-    while ((c = (char) getc(fp)) != EOF) {
+    int c;
+    while ((c = getc(fp)) != EOF) {
         if (isalpha(c)) {
-            unsigned char cc = (unsigned char) c;
-            putchar(lowercase ? tolower(cc) : toupper(cc));
+            putchar(lowercase ? tolower(c) : toupper(c));
             if (randint(1, 100) <= ALTERNATING_CAPS_PERCENT) {
                 lowercase = !lowercase;
             }
