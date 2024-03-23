@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    if (argc > 1) {
+    if (fp != stdin) {
         fclose(fp);
     }
     return 0;
