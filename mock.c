@@ -11,7 +11,7 @@ int randint(int min, int max) {
     int x;
     do {
         x = rand();
-    } while (x >= (RAND_MAX - RAND_MAX % min));
+    } while (x >= (RAND_MAX - RAND_MAX % (min != 0 ? min : 1)));
     return x % (max - min + 1) + min;
 }
 
